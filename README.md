@@ -8,9 +8,9 @@
 ![LangGraph](https://img.shields.io/badge/LangGraph-0.2+-1C3C3C?style=for-the-badge&logo=langgraph&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-Local-000000?style=for-the-badge&logo=ollama&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini-Flash-8E75B2?style=for-the-badge&logo=google&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
-![Docker](https://img.shields.io/badge/Docker-Optional-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Dual--Path-1E3A5F?style=for-the-badge&logo=diagram&logoColor=white)
+![Deployment](https://img.shields.io/badge/Deployment-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Tools](https://img.shields.io/badge/Tools-4_Simulated-10B981?style=for-the-badge&logo=openapiinitiative&logoColor=white)
 
 </div>
 
