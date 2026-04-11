@@ -321,7 +321,7 @@ URL: https://your-app-name.streamlit.app
 
 # Acknowledgments
 
-```mermaid
+
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
 mindmap
   root((**ACKNOWLEDGMENTS**))
@@ -345,7 +345,7 @@ mindmap
       Flash Model
       Free Tier
       Global API
-```
+
 
 
 
