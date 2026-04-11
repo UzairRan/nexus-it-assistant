@@ -180,7 +180,7 @@ with st.sidebar:
     if st.session_state.llm_backend == "local":
         st.success("Local Mode (Ollama)")
     elif st.session_state.llm_backend == "cloud":
-        st.info("Cloud Mode (Orq.ai)")
+         st.info("Cloud Mode (HF Free)") 
     else:
         st.warning("Unknown backend")
     
