@@ -322,30 +322,26 @@ URL: https://your-app-name.streamlit.app
 # Acknowledgments
 
 
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'fontSize': '14px'}}}%%
 mindmap
-  root((**ACKNOWLEDGMENTS**))
-    **LangChain**
+  root((ACKNOWLEDGMENTS))
+    LangChain
       Agent Framework
       Tool Decorator
-      Memory Management
-    **LangGraph**
+    LangGraph
       ReAct Pattern
-      State Graph
       Checkpointer
-    **Streamlit**
+    Streamlit
       Chat Interface
-      Session State
       Cloud Deploy
-    **Ollama**
-      Local Inference
+    Ollama
+      Local LLM
       llama3.2:3b
-      CPU Optimized
-    **Gemini**
+    Gemini
+      Cloud LLM
       Flash Model
-      Free Tier
-      Global API
-
+```
 
 
 
