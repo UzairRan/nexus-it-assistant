@@ -12,13 +12,24 @@ def check_ollama_available() -> bool:
     except:
         return False
 
+def is_streamlit_cloud() -> bool:
+    """Detect if running on Streamlit Cloud."""
+    # Check multiple indicators
+    return (
+        os.getenv("STREAMLIT_CLOUD") == "1" or
+        os.getenv("STREAMLIT_SHARING_MODE") == "1" or
+        os.getenv("STREAMLIT_RUNTIME_ENV") == "cloud" or
+        "streamlit.app" in os.getenv("HOSTNAME", "") or
+        "streamlitcloud" in os.getenv("PATH", "").lower()
+    )
+
 def get_llm(backend_choice: str = "auto"):
     """
     Return a LangChain LLM instance based on environment.
     
     Priority:
     1. Local Ollama (if available)
-    2. Cloud API (only if Ollama not available)
+    2. Cloud API (if on Streamlit Cloud)
     """
     # Auto-detect
     if backend_choice == "auto":
@@ -26,11 +37,11 @@ def get_llm(backend_choice: str = "auto"):
         if check_ollama_available():
             backend = "local"
         # PRIORITY 2: Check if running on Streamlit Cloud
-        elif os.getenv("STREAMLIT_CLOUD") == "1" or os.getenv("STREAMLIT_SHARING_MODE"):
+        elif is_streamlit_cloud():
             backend = "cloud"
-        # PRIORITY 3: Everything else - error
+        # PRIORITY 3: Fallback - try cloud if local fails
         else:
-            backend = "error"
+            backend = "cloud"
     else:
         backend = backend_choice
     
@@ -43,7 +54,6 @@ def get_llm(backend_choice: str = "auto"):
             return None, "error", None
     
     elif backend == "cloud":
-        # Hugging Face Free Inference API (no key required)
         try:
             llm = ChatOpenAI(
                 base_url="https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1/v1",
@@ -57,5 +67,5 @@ def get_llm(backend_choice: str = "auto"):
             return None, "error", None
     
     else:
-        st.error("No LLM backend available. Please ensure Ollama is running locally.")
+        st.error("No LLM backend available.")
         return None, "error", None 
