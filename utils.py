@@ -14,7 +14,6 @@ def check_ollama_available() -> bool:
 
 def is_streamlit_cloud() -> bool:
     """Detect if running on Streamlit Cloud."""
-    # Check multiple indicators
     return (
         os.getenv("STREAMLIT_CLOUD") == "1" or
         os.getenv("STREAMLIT_SHARING_MODE") == "1" or
@@ -31,15 +30,11 @@ def get_llm(backend_choice: str = "auto"):
     1. Local Ollama (if available)
     2. Cloud API (if on Streamlit Cloud)
     """
-    # Auto-detect
     if backend_choice == "auto":
-        # PRIORITY 1: Check for local Ollama first
         if check_ollama_available():
             backend = "local"
-        # PRIORITY 2: Check if running on Streamlit Cloud
         elif is_streamlit_cloud():
             backend = "cloud"
-        # PRIORITY 3: Fallback - try cloud if local fails
         else:
             backend = "cloud"
     else:
@@ -56,7 +51,7 @@ def get_llm(backend_choice: str = "auto"):
     elif backend == "cloud":
         try:
             llm = ChatOpenAI(
-                base_url="https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1/v1",
+                base_url="https://router.huggingface.co/hf-inference/models/mistralai/Mistral-7B-Instruct-v0.1/v1",
                 api_key="",
                 model="mistralai/Mistral-7B-Instruct-v0.1",
                 temperature=0,
