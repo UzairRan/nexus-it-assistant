@@ -43,21 +43,21 @@ It runs **locally with Ollama** (free, private) and automatically switches to **
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'tertiaryTextColor': '#1E293B', 'fontFamily': 'Arial, sans-serif', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
 flowchart TD
-    A[**👤 USER INPUT**] --> B{**🖥️ STREAMLIT APP**}
-    B --> C[**🔍 ENVIRONMENT DETECTION**]
-    C -->|**✅ OLLAMA AVAILABLE**| D[**🏠 LOCAL PATH**]
-    D --> E[**🦙 CHATOLLAMA**<br/>llama3.2:3b]
-    E --> F[**🧠 LANGGRAPH AGENT**<br/>ReAct Loop]
-    F --> G{**🔧 TOOL SELECTION**}
-    G -->|**🔑 Password**| H[**reset_password**]
-    G -->|**🔒 VPN**| I[**check_vpn_status**]
-    G -->|**📦 Install**| J[**install_software**]
-    G -->|**🆘 Escalate**| K[**escalate_to_human**]
-    H & I & J & K --> L[**⚡ TOOL EXECUTION**]
-    L --> M[**💾 MEMORY SAVER**]
-    M --> N[**🤖 AGENT RESPONSE**]
+    A[**USER INPUT**] --> B{**STREAMLIT APP**}
+    B --> C[**ENVIRONMENT DETECTION**]
+    C -->|**OLLAMA AVAILABLE**| D[**LOCAL PATH**]
+    D --> E[**CHATOLLAMA**<br/>llama3.2:3b]
+    E --> F[**LANGGRAPH AGENT**<br/>ReAct Loop]
+    F --> G{**TOOL SELECTION**}
+    G -->|**Password**| H[**reset_password**]
+    G -->|**VPN**| I[**check_vpn_status**]
+    G -->|**Install**| J[**install_software**]
+    G -->|**Escalate**| K[**escalate_to_human**]
+    H & I & J & K --> L[**TOOL EXECUTION**]
+    L --> M[**MEMORY SAVER**]
+    M --> N[**AGENT RESPONSE**]
     N --> B
-    B --> O[**💬 CHAT UI DISPLAY**]
+    B --> O[**CHAT UI DISPLAY**]
 
     style A fill:#2563EB,stroke:#1E3A5F,stroke-width:3px,color:#FFFFFF,font-weight:bold
     style B fill:#1E3A5F,stroke:#3B82F6,stroke-width:3px,color:#FFFFFF,font-weight:bold
@@ -85,21 +85,21 @@ flowchart TD
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'tertiaryTextColor': '#1E293B', 'fontFamily': 'Arial, sans-serif', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
 flowchart TD
-    A[**👤 USER INPUT**] --> B{**☁️ STREAMLIT CLOUD**}
-    B --> C[**🔍 ENVIRONMENT DETECTION**]
-    C -->|**🌐 CLOUD DETECTED**| D[**☁️ CLOUD PATH**]
-    D --> E[**🌟 GEMINI FLASH API**<br/>gemini-2.0-flash]
-    E --> F[**🧠 LANGGRAPH AGENT**<br/>ReAct Loop]
-    F --> G{**🔧 TOOL SELECTION**}
-    G -->|**🔑 Password**| H[**reset_password**]
-    G -->|**🔒 VPN**| I[**check_vpn_status**]
-    G -->|**📦 Install**| J[**install_software**]
-    G -->|**🆘 Escalate**| K[**escalate_to_human**]
-    H & I & J & K --> L[**⚡ TOOL EXECUTION**]
-    L --> M[**💾 MEMORY SAVER**]
-    M --> N[**🤖 AGENT RESPONSE**]
+    A[**USER INPUT**] --> B{**STREAMLIT CLOUD**}
+    B --> C[**ENVIRONMENT DETECTION**]
+    C -->|**CLOUD DETECTED**| D[**CLOUD PATH**]
+    D --> E[**GEMINI FLASH API**<br/>gemini-2.0-flash]
+    E --> F[**LANGGRAPH AGENT**<br/>ReAct Loop]
+    F --> G{**TOOL SELECTION**}
+    G -->|**Password**| H[**reset_password**]
+    G -->|**VPN**| I[**check_vpn_status**]
+    G -->|**Install**| J[**install_software**]
+    G -->|**Escalate**| K[**escalate_to_human**]
+    H & I & J & K --> L[**TOOL EXECUTION**]
+    L --> M[**MEMORY SAVER**]
+    M --> N[**AGENT RESPONSE**]
     N --> B
-    B --> O[**💬 CHAT UI DISPLAY**]
+    B --> O[**CHAT UI DISPLAY**]
 
     style A fill:#2563EB,stroke:#1E3A5F,stroke-width:3px,color:#FFFFFF,font-weight:bold
     style B fill:#1E3A5F,stroke:#3B82F6,stroke-width:3px,color:#FFFFFF,font-weight:bold
@@ -115,7 +115,7 @@ flowchart TD
     style L fill:#6366F1,stroke:#4338CA,stroke-width:2px,color:#FFFFFF,font-weight:bold
     style M fill:#14B8A6,stroke:#0F766E,stroke-width:2px,color:#FFFFFF,font-weight:bold
     style N fill:#EC4899,stroke:#BE185D,stroke-width:3px,color:#FFFFFF,font-weight:bold
-    style O fill:#2563EB,stroke:#1E3A5F,stroke-width:3px,color:#FFFFFF,font-weight:bold 
+    style O fill:#2563EB,stroke:#1E3A5F,stroke-width:3px,color:#FFFFFF,font-weight:bold
 ```
 
 
@@ -127,32 +127,32 @@ flowchart TD
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'tertiaryTextColor': '#1E293B', 'fontFamily': 'Arial, sans-serif', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
 flowchart LR
-    subgraph Frontend[**🖥️ FRONTEND LAYER**]
-        UI[**📱 Streamlit UI**]
-        SS[**💾 Session State**]
+    subgraph Frontend[**FRONTEND LAYER**]
+        UI[**Streamlit UI**]
+        SS[**Session State**]
     end
     
-    subgraph Backend[**⚙️ BACKEND LAYER**]
-        ED[**🔍 Environment<br/>Detector**]
-        LA[**🧠 LangGraph<br/>ReAct Agent**]
-        MEM[**💿 MemorySaver**]
+    subgraph Backend[**BACKEND LAYER**]
+        ED[**Environment<br/>Detector**]
+        LA[**LangGraph<br/>ReAct Agent**]
+        MEM[**MemorySaver**]
     end
     
-    subgraph LLM[**🤖 LLM LAYER**]
-        L1[**🦙 Ollama**<br/>llama3.2:3b<br/>Local]
-        L2[**🌟 Gemini Flash**<br/>gemini-2.0-flash<br/>Cloud]
+    subgraph LLM[**LLM LAYER**]
+        L1[**Ollama**<br/>llama3.2:3b<br/>Local]
+        L2[**Gemini Flash**<br/>gemini-2.0-flash<br/>Cloud]
     end
     
-    subgraph Tools[**🔧 TOOLS LAYER**]
-        T1[**🔑 reset_password**]
-        T2[**🔒 check_vpn**]
-        T3[**📦 install_software**]
-        T4[**🆘 escalate**]
+    subgraph Tools[**TOOLS LAYER**]
+        T1[**reset_password**]
+        T2[**check_vpn**]
+        T3[**install_software**]
+        T4[**escalate**]
     end
     
     UI --> ED
-    ED -->|**🏠 Local**| L1
-    ED -->|**☁️ Cloud**| L2
+    ED -->|**Local**| L1
+    ED -->|**Cloud**| L2
     L1 & L2 --> LA
     LA --> MEM
     LA --> T1 & T2 & T3 & T4
@@ -168,7 +168,7 @@ flowchart LR
     style UI fill:#2563EB,stroke:#1E3A5F,stroke-width:2px,color:#FFFFFF,font-weight:bold
     style SS fill:#3B82F6,stroke:#1D4ED8,stroke-width:2px,color:#FFFFFF,font-weight:bold
     style ED fill:#10B981,stroke:#047857,stroke-width:2px,color:#FFFFFF,font-weight:bold
-    style LA fill:#EC4899,stroke:#BE185D,stroke-width:3px,color:#FFFFFF,font-weight:bold
+    style LA fill:#EC4899,stroke:#1565C0,stroke-width:3px,color:#FFFFFF,font-weight:bold
     style MEM fill:#14B8A6,stroke:#0F766E,stroke-width:2px,color:#FFFFFF,font-weight:bold
     style L1 fill:#8B5CF6,stroke:#6D28D9,stroke-width:2px,color:#FFFFFF,font-weight:bold
     style L2 fill:#F59E0B,stroke:#B45309,stroke-width:2px,color:#FFFFFF,font-weight:bold
@@ -283,10 +283,10 @@ URL: https://your-app-name.streamlit.app
 
 <table>
   <tr>
-    <th width="25%" style="background: #1E3A5F; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">🧠 LangGraph ReAct</th>
-    <th width="25%" style="background: #2D5A8E; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">🔧 Tool Calling</th>
-    <th width="25%" style="background: #1E3A5F; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">🌐 Environment Detection</th>
-    <th width="25%" style="background: #2D5A8E; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">💾 Streamlit State</th>
+    <th width="25%" style="background: #1E3A5F; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">LangGraph ReAct</th>
+    <th width="25%" style="background: #2D5A8E; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">Tool Calling</th>
+    <th width="25%" style="background: #1E3A5F; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">Environment Detection</th>
+    <th width="25%" style="background: #2D5A8E; color: white; padding: 15px; font-size: 18px; border: 3px solid #3B82F6;">Streamlit State</th>
   </tr>
   <tr>
     <td style="background: #F8FAFC; padding: 15px; border: 2px solid #E2E8F0; font-weight: bold;">Agent Reasons</td>
@@ -313,7 +313,7 @@ URL: https://your-app-name.streamlit.app
     <td style="background: #F8FAFC; padding: 15px; border: 2px solid #E2E8F0; font-weight: bold;">Memory Persistence</td>
   </tr>
   <tr>
-    <td style="background: #10B981; color: white; padding: 12px; border: 3px solid #047857; font-weight: bold; font-size: 16px;" colspan="4">🔌 API INTEGRATION: OpenAI Compatible • Gemini Endpoint • Ollama Local • Secrets Management</td>
+    <td style="background: #10B981; color: white; padding: 12px; border: 3px solid #047857; font-weight: bold; font-size: 16px;" colspan="4">API INTEGRATION: OpenAI Compatible | Gemini Endpoint | Ollama Local | Secrets Management</td>
   </tr>
 </table>
 
@@ -324,28 +324,27 @@ URL: https://your-app-name.streamlit.app
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'fontSize': '16px', 'fontWeight': 'bold'}}}%%
 mindmap
-  root((**🙏<br/>ACKNOWLEDGMENTS**))
-    **🦜 LangChain**
+  root((**ACKNOWLEDGMENTS**))
+    **LangChain**
       Agent Framework
       Tool Decorator
       Memory Management
-    **📊 LangGraph**
+    **LangGraph**
       ReAct Pattern
       State Graph
       Checkpointer
-    **🎈 Streamlit**
+    **Streamlit**
       Chat Interface
       Session State
       Cloud Deploy
-    **🦙 Ollama**
+    **Ollama**
       Local Inference
       llama3.2:3b
       CPU Optimized
-    **🌟 Gemini**
+    **Gemini**
       Flash Model
       Free Tier
       Global API
-
 ```
 
 
