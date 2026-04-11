@@ -50,13 +50,18 @@ def get_llm(backend_choice: str = "auto"):
     
     elif backend == "cloud":
         try:
+            api_key = st.secrets.get("GEMINI_API_KEY") or os.getenv("GEMINI_API_KEY")
+            if not api_key:
+                st.error("GEMINI_API_KEY not found. Please add it to secrets.")
+                return None, "error", None
+            
             llm = ChatOpenAI(
-                base_url="https://router.huggingface.co/hf-inference/models/mistralai/Mistral-7B-Instruct-v0.1/v1",
-                api_key="",
-                model="mistralai/Mistral-7B-Instruct-v0.1",
+                base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+                api_key=api_key,
+                model="gemini-2.0-flash",
                 temperature=0,
             )
-            return llm, "cloud", "Mistral-7B (HF Free)"
+            return llm, "cloud", "Gemini Flash"
         except Exception as e:
             st.error(f"Failed to initialize cloud LLM: {e}")
             return None, "error", None
