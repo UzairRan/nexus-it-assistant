@@ -225,6 +225,8 @@ streamlit run app.py
 The app will auto-detect Ollama and use local mode.
 
 
+----------------------------------------------------------------------------- 
+
 ## Cloud Deployment
 
 **1- Fork/Clone to GitHub**
@@ -257,24 +259,51 @@ Click "Save" and "Reboot app"
 URL: https://your-app-name.streamlit.app
 
 
+-----------------------------------------------------------------------------  
+
+
  # Testing
 
- Test Case	|  Expected Tool
- 
- 
-"I forgot my password"	|  reset_password
+<div align="center">
+
+<h3 style="color: #1E3A5F; font-weight: bold;">Test Cases</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="background: #1E3A5F; color: white; padding: 15px; font-size: 16px; border: 3px solid #3B82F6; text-align: left;">Test Case</th>
+      <th style="background: #1E3A5F; color: white; padding: 15px; font-size: 16px; border: 3px solid #3B82F6; text-align: left;">Expected Tool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background: #F8FAFC; padding: 12px; border: 2px solid #E2E8F0; font-weight: bold;">"I forgot my password"</td>
+      <td style="background: #FFFFFF; padding: 12px; border: 2px solid #E2E8F0; font-family: monospace; font-weight: bold; color: #EF4444;">reset_password</td>
+    </tr>
+    <tr>
+      <td style="background: #F8FAFC; padding: 12px; border: 2px solid #E2E8F0; font-weight: bold;">"Is VPN working?"</td>
+      <td style="background: #FFFFFF; padding: 12px; border: 2px solid #E2E8F0; font-family: monospace; font-weight: bold; color: #3B82F6;">check_vpn_status</td>
+    </tr>
+    <tr>
+      <td style="background: #F8FAFC; padding: 12px; border: 2px solid #E2E8F0; font-weight: bold;">"How to install Python?"</td>
+      <td style="background: #FFFFFF; padding: 12px; border: 2px solid #E2E8F0; font-family: monospace; font-weight: bold; color: #10B981;">install_software</td>
+    </tr>
+    <tr>
+      <td style="background: #F8FAFC; padding: 12px; border: 2px solid #E2E8F0; font-weight: bold;">"Laptop won't start"</td>
+      <td style="background: #FFFFFF; padding: 12px; border: 2px solid #E2E8F0; font-family: monospace; font-weight: bold; color: #F97316;">escalate_to_human</td>
+    </tr>
+    <tr>
+      <td style="background: #F8FAFC; padding: 12px; border: 2px solid #E2E8F0; font-weight: bold;">"VPN down and need Slack"</td>
+      <td style="background: #FFFFFF; padding: 12px; border: 2px solid #E2E8F0; font-weight: bold; color: #8B5CF6;">Multi-tool chain</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 
-"Is VPN working?"	|  check_vpn_status
 
-
-"How to install Python?"	|  install_software
-
-
-"Laptop won't start"	|  escalate_to_human
-
-
-"VPN down and need Slack"	  |  Multi-tool chain
+-----------------------------------------------------------------------------   
 
 
 # What You Learn Building This
@@ -319,30 +348,51 @@ URL: https://your-app-name.streamlit.app
 
 </div>
 
+
+-----------------------------------------------------------------------------  
+
+
 # Acknowledgments
 
 
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#1E3A5F', 'primaryTextColor': '#FFFFFF', 'primaryBorderColor': '#3B82F6', 'lineColor': '#2563EB', 'secondaryColor': '#10B981', 'tertiaryColor': '#F8FAFC', 'fontSize': '14px'}}}%%
-mindmap
-  root((ACKNOWLEDGMENTS))
-    LangChain
-      Agent Framework
-      Tool Decorator
-    LangGraph
-      ReAct Pattern
-      Checkpointer
-    Streamlit
-      Chat Interface
-      Cloud Deploy
-    Ollama
-      Local LLM
-      llama3.2:3b
-    Gemini
-      Cloud LLM
-      Flash Model
-```
+<div align="center">
 
+<h3 style="color: #1E3A5F; font-weight: bold;">ACKNOWLEDGMENTS</h3>
+
+<table>
+  <tr>
+    <td style="background: #1E3A5F; color: white; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;">
+      LangChain<br/>
+      <span style="font-size: 12px; color: #94A3B8;">Agent Framework • Tool Decorator</span>
+    </td>
+    <td style="background: #2D5A8E; color: white; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;">
+      LangGraph<br/>
+      <span style="font-size: 12px; color: #94A3B8;">ReAct Pattern • Checkpointer</span>
+    </td>
+    <td style="background: #1E3A5F; color: white; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;">
+      Streamlit<br/>
+      <span style="font-size: 12px; color: #94A3B8;">Chat Interface • Cloud Deploy</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="background: #312E81; color: white; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;">
+      Ollama<br/>
+      <span style="font-size: 12px; color: #A5B4FC;">Local LLM • llama3.2:3b</span>
+    </td>
+    <td style="background: #047857; color: white; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center;" colspan="2">
+      Gemini<br/>
+      <span style="font-size: 12px; color: #6EE7B7;">Cloud LLM • Flash Model • Free Tier</span>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+
+-----------------------------------------------------------------------------  
+
+-----------------------------------------------------------------------------  
 
 
 
